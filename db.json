@@ -1,0 +1,10 @@
+{
+  "posts": [
+    { "id": 1, "title": "First post", "content": "I tawt I taw a puddy tat" },
+    { "id": 2, "title": "Second post", "content": "Sufferin' succotash!" }
+  ],
+  "users": [
+    { "id": 1, "name": "Tweety" },
+    { "id": 2, "name": "Sylvester" }
+  ]
+}
