@@ -8,7 +8,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   selector: 'app-layout-toolbar',
   standalone: true,
   imports: [MatToolbarModule, MatButtonModule, MatIconModule],
-  templateUrl: './toolbar.html',
-  styleUrl: './toolbar.scss',
+  templateUrl: './toolbar.component.html',
+  styleUrl: './toolbar.component.scss',
 })
-export class Navbar {}
+export class Toolbar {}

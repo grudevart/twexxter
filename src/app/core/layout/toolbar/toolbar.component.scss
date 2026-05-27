@@ -1,0 +1,25 @@
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+span {
+  font-size: 18px;
+  font-weight: 600;
+  align-self: center;
+}
