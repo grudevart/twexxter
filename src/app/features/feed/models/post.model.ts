@@ -1,3 +1,5 @@
+import { User } from "../../profile/models/user.model";
+
 export interface Post {
     id: number;
     title: string;
@@ -5,4 +7,6 @@ export interface Post {
     userId: number;
     imageUrl: string;
     likes: number;
+    
+    user: User
 }

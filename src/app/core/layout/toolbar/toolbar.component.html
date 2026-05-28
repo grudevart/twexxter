@@ -3,10 +3,17 @@
     <mat-icon>menu</mat-icon>
   </button>
   <div class="toolbar-center">
-  <a routerLink="/" class="app-title">tweexxtter</a>
-   </div>
+    <a routerLink="/" class="app-title">tweexxtter</a>
+  </div>
   <span class="example-spacer"></span>
-  <button matIconButton class="account-icon" routerLink="/profile" aria-label="Account box icon">
-    <mat-icon>account_box</mat-icon>
-  </button>
+
+  <div class="profile">
+    <mat-card routerLink="/profile" >
+      <mat-card-header>
+        <img mat-card-avatar [src]="user()?.avatarUrl" alt="avatar"/>
+        <mat-card-title>
+          {{ user()?.name }}
+        </mat-card-title>
+</mat-card-header></mat-card>
+  </div>
 </mat-toolbar>

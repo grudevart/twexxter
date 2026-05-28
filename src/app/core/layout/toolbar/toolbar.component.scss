@@ -26,4 +26,18 @@
   font-weight: 600;
   cursor: pointer;
 }
+.profile{
+    cursor: pointer;
+}
+.post {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.post-img {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 8px;
+}
 

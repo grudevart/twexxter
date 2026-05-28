@@ -3,6 +3,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { Post } from '../../models/post.model';
 import { PostService } from '../../services/post.service';
+import { User } from '../../../profile/models/user.model';
 
 @Component({
   selector: 'app-post',

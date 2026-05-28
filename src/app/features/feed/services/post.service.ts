@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Post } from '../models/post.model';
 
 @Injectable({
@@ -10,9 +10,40 @@ import { Post } from '../models/post.model';
 export class PostService {
     private readonly http = inject(HttpClient)
 
-      getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>('http://localhost:3000/posts');
-  }
+    private isValidUrl(url: string): boolean {
+  return /^https?:\/\/.+\.(jpg|jpeg|png|webp|gif)$/i.test(url);
+}
+
+private formatImage(url: string): string {
+  if (!url) return '/assets/fallback.jpg';
+
+  // ✅ remote valid URL
+  if (this.isValidUrl(url)) return url;
+
+  // ✅ local asset
+  return '/assets/' + url;
+}
+
+
+  //     getPosts(): Observable<Post[]> {
+  //   return this.http.get<Post[]>('http://localhost:3000/posts?_expand=user');
+  // }
+  
+getPosts(): Observable<Post[]> {
+  return this.http.get<Post[]>('http://localhost:3000/posts?_expand=user').pipe(
+    map(posts =>
+      posts.map(post => ({
+        ...post,
+        imageUrl: this.formatImage(post.imageUrl),
+        user: {
+          ...post.user,
+          avatarUrl: this.formatImage(post.user.avatarUrl)
+        }
+      }))
+    )
+  );
+}
+
 
 //   // ✅ GET single post
 //   getPost(id: number): Observable<Post> {
