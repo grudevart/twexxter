@@ -1,19 +1,31 @@
-.example-card {
-  max-width: 400px;
+// .example-card {
+//   max-width: 400px;
+// }
+
+// .example-header-image {
+//   background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+//   background-size: cover;
+// }
+// /*
+// Source - https://stackoverflow.com/a/52800707
+// Posted by Chief Madog
+// Retrieved 2026-05-26, License - CC BY-SA 4.0
+// */
+
+// .post-div{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.post {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-/*
-Source - https://stackoverflow.com/a/52800707
-Posted by Chief Madog
-Retrieved 2026-05-26, License - CC BY-SA 4.0
-*/
-
-.post-div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.post-img {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 8px;
 }
