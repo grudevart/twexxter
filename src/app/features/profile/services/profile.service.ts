@@ -7,9 +7,9 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProfileService {
-  constructor(private http:HttpClient){}
+  constructor(private http: HttpClient) {}
 
-  getUser() : Observable<User>  {
-  return this.http.get<User>('http://localhost:3000/users/1');
-}
+  getUser(): Observable<User> {
+    return this.http.get<User>('http://localhost:3000/users/1');
+  }
 }
