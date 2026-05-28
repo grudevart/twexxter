@@ -4,7 +4,7 @@ import { PostComponent } from '../post/post.component';
 
 @Component({
   selector: 'app-home-page',
-  imports: [PostComponent, RouterLink],
+  imports: [PostComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

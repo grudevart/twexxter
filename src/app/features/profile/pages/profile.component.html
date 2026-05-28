@@ -1,0 +1,31 @@
+<form [formGroup]="form" class="user-profile">
+
+  <div class="form-fields-wrapper">
+
+    <div class="input-fields-container">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" type="text" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Bio</mat-label>
+        <input matInput formControlName="bio" type="text" placeholder="Add something about yourself" />
+        <!-- ✅ CHANGED -->
+      </mat-form-field>
+
+    </div>
+    <div class="avatar-container">
+      @if (isLoading) {
+      <mat-spinner></mat-spinner>
+      } @else {
+      <img [src]="user()?.avatarUrl" class="avatar" />
+      }
+    </div>
+  </div>
+
+  <div class="buttons-container">
+    <button mat-raised-button type="submit" color="primary">Save</button>
+
+  </div>
+</form>
