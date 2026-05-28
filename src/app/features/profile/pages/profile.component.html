@@ -14,16 +14,15 @@
           type="text"
           placeholder="Add something about yourself"
         />
-        <!-- ✅ CHANGED -->
       </mat-form-field>
     </div>
     <div class="avatar-container">
-      @if (isLoading) {
+@if (isLoading) {
         <mat-spinner></mat-spinner>
-      } @else {
-        <img [src]="user()?.avatarUrl" class="avatar" />
-      }
-    </div>
+} @else {
+  <img [src]="user()?.avatarUrl" class="avatar" />
+}
+</div>
   </div>
 
   <div class="buttons-container">

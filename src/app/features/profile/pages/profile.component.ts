@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@ang
 import { CommonModule} from '@angular/common';
 import {
   FormBuilder,
-  FormGroup,
   ReactiveFormsModule,
 } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -11,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProfileService } from '../services/profile.service';
 import { User } from '../models/user.model';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
 
 /** @title Form field appearance variants */
 @Component({
@@ -23,23 +23,19 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatInputModule,
     MatButtonModule,
     MatProgressSpinnerModule,
+    MatCardModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProfileComponent implements OnInit {
+  private readonly profileService = inject(ProfileService)
+  private readonly fb = inject(FormBuilder)
   user = signal<User | null>(null);
-  form: FormGroup;
-  isLoading: boolean = true;
-
-  constructor(
-    private fb: FormBuilder,
-    private readonly profileService: ProfileService,
-  ) {
-    this.form = this.fb.group({
+  form = this.fb.group({
       name: [''],
       bio: [''],
     });
-  }
+  isLoading: boolean = true;
 
   ngOnInit(): void {
     this.profileService.getUser().subscribe((user) => {
@@ -50,7 +46,7 @@ export class ProfileComponent implements OnInit {
       this.form.patchValue({
         name: user.name,
         bio: user.bio ?? '',
-      });
+    });
     });
   }
 }
