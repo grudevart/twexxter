@@ -50,9 +50,9 @@ getPosts(): Observable<Post[]> {
 //     return this.http.get<Post>(`${this.apiUrl}/${id}`);
 //   }
 
-//   // ✅ PUT (update post)
-//   updatePost(post: Post): Observable<Post> {
-//     return this.http.put<Post>(`${this.apiUrl}/${post.id}`, post);
-//   }
+  // ✅ PUT (update post)
+  updatePost(post: Post): Observable<Post> {
+    return this.http.put<Post>(`${'http://localhost:3000/posts'}/${post.id}`, post);
+  }
 
 }
