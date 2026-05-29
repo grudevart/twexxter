@@ -6,7 +6,7 @@
       "content": "I tawt I taw a puddy tat",
       "userId": 2,
       "imageUrl": "tweety-sylvester.jpg",
-      "likes": 8
+      "likes": 58
     },
     {
       "id": 2,
@@ -14,11 +14,11 @@
       "content": "Sufferin' succotash!",
       "userId": 3,
       "imageUrl": "tweety-sylvester.jpg",
-      "likes": 5
+      "likes": 20
     },
     {
       "userId": 1,
-      "likes": 0,
+      "likes": 7,
       "id": 4,
       "title": "Post z grzybem, co trujący jest. Ja bym nie jadł",
       "imageUrl": "https://gimpdlazielonych.pl/wp-content/uploads/2019/10/jak-zapisac-zdjecie-do-jpg-1.webp",
@@ -26,7 +26,7 @@
     },
     {
       "userId": 1,
-      "likes": 4,
+      "likes": 9,
       "id": 5,
       "title": "Widok zza okna... ale nie wiem czyjego",
       "imageUrl": "https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-landscape-jpg-wallpapers-free-download-image_2573540.jpg",
@@ -34,7 +34,7 @@
     },
     {
       "userId": 1,
-      "likes": 6,
+      "likes": 9,
       "id": 6,
       "title": "Claustrophobic Sting",
       "imageUrl": "https://picsum.photos/500/200?.jpg",

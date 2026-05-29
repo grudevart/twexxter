@@ -1,5 +1,5 @@
 <div class="main-div">
   @for (post of posts(); track post.id) {
-    <app-post [post]="post"></app-post>
+    <app-post [post]="post" (likeEmitter)="metoda($event)"></app-post>
   }
 </div>
